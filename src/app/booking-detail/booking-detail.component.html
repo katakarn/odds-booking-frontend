@@ -1,48 +1,100 @@
+<div class="container">
+
+  <div class="header">
+    ODDS Booking 🧷
+  </div>
+
+  <div class="form-container">
+  <label class="input-label" for="name">Name : </label>
+  <input class="input input-text" id="name" type="text" placeholder="" [(ngModel)]="bookingDetail.name"/>
+
+  <label class="input-label" for="email">Email : </label>
+  <input class="input input-text" id="email" type="email" placeholder="" [(ngModel)]="bookingDetail.email"/>
+
+  <label class="input-label" for="phoneNumber">Tel : </label>
+  <input class="input input-text" id="phoneNumber" type="text" placeholder="" [(ngModel)]="bookingDetail.phoneNumber"/>
+
+  <label class="input-label" for="room">Room : </label>
+  <select class="input input-selector" [(ngModel)]="bookingDetail.room" id="room">
+    <option value="Odds Geekky Base">Odds Geeky Base</option>
+    <option value="Odds Neon">Odds Neon</option>
+  </select>
+
+  <label class="input-label"  for="reason">Reason : </label>
+  <textarea class="input input-text-area" id="reason" placeholder="detail" [(ngModel)]="bookingDetail.reason"></textarea>
+
+  <label class="input-label"  for="startDate">Start : </label>
+  <input class="input input-datetime" id="startDate" type="datetime-local" [(ngModel)]="bookingDetail.startDate"/>
+
+  <label class="input-label"  for="endDate">End : </label>
+  <input class="input input-datetime" id="endDate" type="datetime-local" [(ngModel)]="bookingDetail.endDate"/>
+
+  <button class="button-submit" (click)="addBooking()">Submit</button>
+  </div>
+  
+</div>
+
+
+<!-- 
+
 <div class="center">
   <div>
     <mat-form-field appearance="fill">
       <mat-label>Name</mat-label>
-      <input matInput class="inputName" />
+      <input matInput class="inputName" type="text" id="name" [(ngModel)]="bookingDetail.name" />
     </mat-form-field>
   </div>
   <div>
     <mat-form-field appearance="fill">
       <mat-label>E-mail</mat-label>
-      <input matInput class="inputName" />
+      <input matInput class="inputName" type="email" id="email" [(ngModel)]="bookingDetail.email"/>
     </mat-form-field>
   </div>
   <div>
     <mat-form-field appearance="fill">
       <mat-label>Phone number</mat-label>
-      <input matInput class="inputName" />
-    </mat-form-field>
-  </div>
-  <div>
-    <mat-form-field appearance="fill">
-      <mat-label>Reason / Event</mat-label>
-      <input matInput class="inputName" />
+      <input matInput class="inputName" type="text" id="tel" [(ngModel)]="bookingDetail.phoneNumber"/>
     </mat-form-field>
   </div>
 
   <div>
     <mat-form-field appearance="fill">
       <mat-label>Room</mat-label>
-      <mat-select>
-        <mat-option value="one">First option</mat-option>
-        <mat-option value="two">Second option</mat-option>
+      <mat-select [(ngModel)]="bookingDetail.room">
+        <mat-option value="odds geekky base">Odds Geekky Base</mat-option>
+        <mat-option value="odds neon">Odds Neon</mat-option>
       </mat-select>
     </mat-form-field>
   </div>
+
   <div>
-    <mat-form-field>
-      <input matInput type="datetime-local" placeholder="start date" />
+    <mat-form-field appearance="fill">
+      <mat-label>Reason / Event</mat-label>
+      <textarea matInput class="inputName" type="text" id="reason" [(ngModel)]="bookingDetail.reason"></textarea>
     </mat-form-field>
-    <mat-form-field class="pl-4">
-        <input matInput type="datetime-local" placeholder="end date" />
-      </mat-form-field>
   </div>
 
-  <div class = "pt-3">
-    <button mat-raised-button color="primary">SUBMIT</button>
-  </div>
-</div>
+  <div>
+    <mat-form-field>
+      <input matInput type="datetime-local" placeholder="start date" [(ngModel)]="bookingDetail.startDate"/>
+    </mat-form-field>
+    <mat-form-field class="pl-4">
+        <input matInput type="datetime-local" placeholder="end date" [(ngModel)]="bookingDetail.endDate" />
+      </mat-form-field>
+  </div> -->
+
+  <!-- <div>
+    name : {{bookingDetail.name}}<br>
+    email : {{bookingDetail.email}}<br>
+    tel : {{bookingDetail.phoneNumber}}<br>
+    reason : {{bookingDetail.reason}}<br>
+    room : {{bookingDetail.room}}<br>
+    start : {{bookingDetail.startDate}}<br>
+    end : {{bookingDetail.endDate}}
+  </div> -->
+
+  <!-- <div class = "pt-3">
+    <button mat-raised-button color="primary" (click)="sendData()">SUBMIT</button>
+  </div> -->
+<!-- </div> -->
+<!--  -->
